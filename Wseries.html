@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VE - Watch Series</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="series_detail.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="LOGO.png" alt="MovieHub Logo" style="height:40px;width:auto;vertical-align:middle;margin-right:8px;">
+        </div>
+        <nav>
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="movies.html" class="nav-link">Movies</a>
+            <a href="series.html" class="nav-link active">Series</a>
+        </nav>
+    </header>
+    <main class="series-detail">
+        <div class="series-header-bg" id="seriesBackdrop"></div>
+        <div class="series-header">
+            <div class="series-poster">
+                <img id="seriesPoster" src="" alt="Series Poster">
+            </div>
+            <div class="series-info">
+                <h1 id="seriesTitle"></h1>
+                <div class="series-meta">
+                    <span id="seriesYear"></span>
+                    <span id="seriesRating"></span>
+                </div>
+                <p id="seriesOverview" class="series-description"></p>
+                <div class="season-episode-select">
+                    <select id="seasonSelect"></select>
+                    <select id="episodeSelect"></select>
+                </div>
+            </div>
+        </div>
+        <div class="source-note">If a certain series dosen't work with the selected season and episode try a different one.</div>
+        <div class="video-source-switcher">
+            <select id="sourceSelect"></select>
+        </div>
+        <div class="video-container">
+            <iframe id="seriesPlayer" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="cast-section">
+            <h2>Cast</h2>
+            <div id="castGrid" class="cast-grid"></div>
+        </div>
+    </main>
+    <a href="series.html" class="return-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right:4px;"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Back to Series
+    </a>
+    <footer>
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> Vibranium Entertainment. All rights reserved.</span>
+    </footer>
+    <script src="series_detail.js"></script>
+</body>
+</html>

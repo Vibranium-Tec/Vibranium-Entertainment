@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VE - Watch Movies</title>
+    <link rel="stylesheet" href="shared.css">
+    <link rel="stylesheet" href="movie_detail.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="LOGO.png" alt="MovieHub Logo" style="height:40px;width:auto;vertical-align:middle;margin-right:8px;">
+        </div>
+        <nav>
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="movies.html" class="nav-link active">Movies</a>
+            <a href="series.html" class="nav-link">Series</a>
+        </nav>
+    </header>
+
+    <main class="movie-detail">
+        <div class="movie-header-bg" id="movieBackdrop"></div>
+        <div class="movie-header">
+            <div class="movie-poster">
+                <img id="moviePoster" src="" alt="Movie Poster">
+            </div>
+            <div class="movie-info">
+                <h1 id="movieTitle"></h1>
+                <div class="movie-meta">
+                    <span id="movieYear"></span>
+                    <span id="movieRuntime"></span>
+                    <span id="movieStartTime"></span>
+                    <span id="movieEndTime"></span>
+                    <span id="movieRating"></span>
+                </div>
+                <div id="trailerLinks" class="trailer-links"></div>
+                <p id="movieOverview" class="movie-description"></p>
+            </div>
+        </div>
+
+        <div class="video-source-switcher">
+            <select id="sourceSelect"></select>
+        </div>
+        <div class="video-container">
+            <iframe id="moviePlayer" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="cast-section">
+            <h2>Cast</h2>
+            <div id="castGrid" class="cast-grid"></div>
+        </div>
+    </main>
+
+    <div id="trailerModal" class="trailer-modal">
+        <div class="trailer-modal-content">
+            <span id="closeTrailer" class="close-btn">&times;</span>
+            <iframe id="trailerFrame" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <a href="movies.html" class="return-btn">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24" style="margin-right:4px;"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        Back to Movies
+    </a>
+
+    <footer>
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> Vibranium Entertainment. All rights reserved.</span>
+    </footer>
+
+    <script src="movie_detail.js"></script>
+</body>
+</html> 

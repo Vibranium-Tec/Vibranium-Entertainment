@@ -1,0 +1,307 @@
+body, html {
+  overflow-x: hidden;
+}
+body {
+  background: #1c1c1c;
+}
+.main-header, .hero-main, .section-title, footer {
+  background: #1c1c1c;
+}
+.movie-card, .carousel-track, .carousel-row {
+  background: #1c1c1c ;
+}
+.movie-card p {
+  display: none;
+}
+.hero-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 4vw 24px 4vw;
+  background: linear-gradient(100deg, #1c1c1c  70%, #a084ee22 100%);
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  min-height: 320px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-main-content {
+  max-width: 400px;
+  z-index: 2;
+}
+.hero-main-content h1 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+  line-height: 1.1;
+}
+.hero-main-content p {
+  color: #b8b8d1;
+  font-size: 1rem;
+  margin-bottom: 28px;
+}
+.cta-btns {
+  display: flex;
+  gap: 18px;
+}
+.cta-btns a {
+  padding: 10px 22px;
+  border-radius: 22px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  background: #a084ee;
+  color: #181920;
+  box-shadow: 0 4px 16px 0 #a084ee33;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.cta-btns a.secondary {
+  background: #1c1c1c ;
+  color: #fff;
+  border: 2px solid #a084ee;
+}
+.hero-main-art {
+  position: relative;
+  z-index: 1;
+  width: 300px;
+  min-width: 160px;
+  aspect-ratio: 16/11;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px 0 #a084ee33;
+  background: #181920;
+}
+.hero-main-art img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.92) blur(0.5px);
+  border-radius: 18px;
+}
+.hero-main-art .play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 24px #a084ee55;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.hero-main-art .play-btn:hover {
+  background: #a084ee;
+}
+.hero-main-art .play-btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #a084ee;
+  transition: fill 0.2s;
+}
+.hero-main-art .play-btn:hover svg {
+  fill: #fff;
+}
+.section-title {
+  font-size: 1.2rem;
+  color: #fff;
+  margin: 32px 0 12px 4vw;
+  letter-spacing: 1px;
+}
+.carousel-row {
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 0 4vw 12px 4vw;
+  min-height: 220px;
+}
+.carousel-track {
+  display: flex;
+  gap: 12px;
+  transition: transform 0.7s cubic-bezier(.17,.67,.83,.67);
+  will-change: transform;
+}
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #1c1c1c ;
+  border: none;
+  color: #a084ee;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 2;
+  box-shadow: 0 2px 8px #0002;
+  opacity: 0.92;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  padding: 0;
+}
+.carousel-arrow img {
+  width: 20px;
+  height: 20px;
+  display: block;
+  pointer-events: none;
+}
+.carousel-arrow:hover {
+  background: #a084ee;
+  color: #1c1c1c ;
+  box-shadow: 0 4px 16px #a084ee33;
+}
+.carousel-arrow.left {
+  left: 0;
+}
+.carousel-arrow.right {
+  right: 0;
+}
+.movie-card {
+  background: #252525 ;
+  border-radius: 12px;
+  min-width: 150px;
+  max-width: 150px;
+  margin: 0;
+  box-shadow: 0 1px 4px 0 #a084ee11;
+  overflow: hidden;
+  transition: transform 0.18s cubic-bezier(.17,.67,.83,.67), box-shadow 0.18s;
+  cursor: pointer;
+  flex-shrink: 0;
+  position: relative;
+}
+.movie-card:hover {
+  transform: translateY(-6px) scale(1.04);
+  box-shadow: 0 8px 24px 0 #a084ee44;
+}
+.movie-card img {
+  width: 100%;
+  aspect-ratio: 2/3;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px 12px 0 0;
+}
+.movie-card .movie-title {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 8px 8px 4px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movie-card .movie-meta {
+  color: #b8b8d1;
+  font-size: 0.85rem;
+  padding: 0 8px 8px 8px;
+}
+.movie-card.fade-move {
+  transition: none;
+  opacity: 1;
+  transform: none;
+  pointer-events: auto;
+}
+@media (max-width: 900px) {
+  .hero-main {
+    flex-direction: column;
+    padding: 24px 2vw 12px 2vw;
+    min-height: 200px;
+  }
+  .hero-main-art {
+    margin-top: 18px;
+    width: 90vw;
+    max-width: 300px;
+  }
+  .section-title, .carousel-row {
+    margin-left: 2vw;
+    padding-left: 2vw;
+  }
+}
+@media (max-width: 600px) {
+  .hero-main-content h1 {
+    font-size: 1.2rem;
+  }
+  .hero-main-art {
+    min-width: 100px;
+  }
+  .section-title {
+    font-size: 1rem;
+  }
+  .movie-card {
+    min-width: 90px;
+    max-width: 90px;
+  }
+}
+
+/* Add to home.css or shared.css for the info-footer styling */
+.info-footer {
+  background: #181920;
+  color: #b8b8d1;
+  padding: 40px 0 24px 0;
+  margin-top: 48px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  box-shadow: 0 -2px 12px 0 rgba(0,0,0,0.10);
+}
+.footer-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.about-me, .footer-links {
+  flex: 1 1 260px;
+  min-width: 220px;
+}
+.about-me h3, .footer-links h3 {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+.about-me p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links li {
+  margin-bottom: 8px;
+}
+.footer-links a {
+  color: #a084ee;
+  text-decoration: none;
+  font-size: 1.05rem;
+  transition: color 0.18s;
+}
+.footer-links a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  .footer-content {
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 18px;
+  }
+} 

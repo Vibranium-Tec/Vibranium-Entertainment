@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VE - Series</title>
+    <link rel="stylesheet" href="shared.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="LOGO.png" alt="Vibranium Logo" style="height:40px;width:auto;vertical-align:middle;margin-right:8px;">
+            <span class="vibranium-glow">Vibranium</span>
+          </div>
+        <nav>
+            <a href="home.html" class="nav-link">Home</a>
+            <a href="movies.html" class="nav-link">Movies</a>
+            <a href="series.html" class="nav-link active">Series</a>
+        </nav>
+    </header>
+    <div class="hero-section">
+        <h1>Trending TV Series</h1>
+        <p>Discover the hottest TV shows right now!</p>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search TV series...">
+        </div>
+    </div>
+    <main>
+        <div id="videoGrid"></div>
+        <div id="searchResults"></div>
+    </main>
+    <footer>
+        <span>&copy; <script>document.write(new Date().getFullYear())</script> Vibranium Entertainment. All rights reserved.</span>
+    </footer>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-body"></div>
+        </div>
+    </div>
+    <script src="series.js"></script>
+</body>
+</html>
