@@ -1,6 +1,7 @@
 services:
-  - type: static
+  - type: web
     name: Vibranium-E
+    runtime: static
     env: static
     staticPublishPath: public
     buildCommand: ""
